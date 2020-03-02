@@ -27,12 +27,12 @@ public class StoryController {
 
     @PostMapping
     public ResponseEntity<StoryInfo> create(@RequestBody StoryForm form) {
-        if (projectIsActive(form.projectId)) {
+//        if (projectIsActive(form.projectId)) {
             StoryRecord record = gateway.create(mapToFields(form));
             return new ResponseEntity<>(present(record), HttpStatus.CREATED);
-        }
+//        }
 
-        return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);
+//        return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);
     }
 
     @GetMapping
