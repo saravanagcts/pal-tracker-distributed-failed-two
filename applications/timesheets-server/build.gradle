@@ -2,4 +2,7 @@ apply from: "$projectDir/../server.gradle"
 
 dependencies {
     compile project(":components:timesheets")
+    compile('org.springframework.cloud:spring-cloud-netflix-eureka-server:1.4.3.RELEASE')
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-test'
 }
